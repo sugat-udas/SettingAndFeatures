@@ -51,12 +51,15 @@ class FeaturesBody extends StatelessWidget {
                 fontSize: 12.0,
               ),
             ),
-            trailing: CupertinoSwitch(
-              trackColor: Colors.black,
-              value: ItemList.itemList[index].isOn,
-              onChanged: (val) {
-                _controller.changeSwitchValue(index);
-              },
+            trailing: Transform.scale(
+              scale: 0.6,
+              child: CupertinoSwitch(
+                trackColor: Colors.black,
+                value: ItemList.itemList[index].isOn,
+                onChanged: (val) {
+                  _controller.changeSwitchValue(index);
+                },
+              ),
             ),
           );
         });
